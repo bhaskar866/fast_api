@@ -5,13 +5,15 @@ from fastapi import FastAPI
 from models import Test_db
 
 
-from config.db import conn
+# from config.db import conn
 
 app = FastAPI()
 
-Res = list(conn.learn_server_side.Test_db.find())
+# Res = list(conn.learn_server_side.Test_db.find())
 
+print("Hello Bhaskar")
 
 @app.get("/{var}")
 def fast_api(var:str):
-    return Res[var]
+    print("Inside ")
+    return "Hello Welcome"
